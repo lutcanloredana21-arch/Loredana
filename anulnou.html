@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magia Sărbătorilor de Iarnă</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      background: linear-gradient(#f3f7ff, #e3ecff);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(135deg, #b71c1c, #d32f2f);
+      color: white;
+      text-align: center;
+      padding: 40px 25px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0 0 10px 0;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      font-style: italic;
+      opacity: 0.95;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 40px;
+      flex: 1;
+    }
+
+    .card {
+      background: white;
+      border: 3px solid #c62828;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(156, 16, 16, 0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      color: #b71c1c;
+      margin-bottom: 12px;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+      flex: 1;
+      text-align: justify;
+    }
+
+    .card-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background-color: #c62828;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s, transform 0.2s;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+
+    .btn:hover {
+      background-color: #8e0000;
+      transform: scale(1.05);
+    }
+
+    .btn-secondary {
+      background-color: #1976d2;
+    }
+
+    .btn-secondary:hover {
+      background-color: #0d47a1;
+    }
+
+    footer {
+      background: linear-gradient(135deg, #b71c1c, #d32f2f);
+      color: white;
+      text-align: center;
+      padding: 30px 25px;
+      box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.2);
+      margin-top: auto;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 1rem;
+    }
+
+    footer .footer-info {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px 20px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      main {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+
+      header,
+      footer {
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      .card-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+
+  <body>
+    <header>
+      <h1>
+        <b><i>🎄 Magia Sărbătorilor de Iarnă ❄️</i></b>
+      </h1>
+      <p>Descoperă farmecul tradițiilor de Crăciun</p>
+    </header>
+    <audio id="background-music" autoplay loop>
+      <source
+        src="https://youtu.be/Sua2y5t-eFw?si=9zmib8A-8x2QbI7m"
+        type="audio/mp3"
+      />
+      Your browser does not support the audio element.
+    </audio>
+    <main>
+      <div class="card">
+        <img
+          src="https://editiadedimineata.ro/wp-content/uploads/2018/12/bradul-de_craciun.jpg"
+          alt="Brad de Crăciun"
+        />
+        <h2>Bradul de Crăciun</h2>
+        <p>
+          Bradul de Crăciun este ca o "sărbătoare verde al iernii", aducând
+          lumină în mijlocul frigului. Pe ramurile lui, globurile strălucesc ca
+          "micile stele ale casei", iar vârful devine un "semn al speranței"
+          care încălzește sufletele.
+        </p>
+        <div class="card-buttons">
+          <a
+            href="https://decortrendy.ro/blog/semnificatia-bradului-de-craciun-si-traditia-din-spatele-impodobirii/?srsltid=AfmBOoq0cCIMNcpDnSevXkOaRVWVN36RQfieN6ssPdWOV93QkPAMNnKq"
+            class="btn"
+            target="_blank"
+            >Detalii</a
+          >
+          <button class="btn btn-secondary" onclick="showChristmasTree()">
+            🎄 Mesaj Festiv
+          </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://upromania.ro/i/files/0611201906Nov03-53589923-pd6hjom13kg8vkngjigot7g535.jpg"
+          alt="Cadouri"
+        />
+        <h2>Cadouri</h2>
+        <p>
+          Cadourile sunt ca "mici comori ale sufletului", pline de gânduri bune
+          și surprize. Ele deschid ferestre către bucurie și fac legătura dintre
+          oameni mai caldă și mai strălucitoare.
+        </p>
+        <div class="card-buttons">
+          <a
+            href="https://literalmente.ro/cadourile-de-craciun-traditii-si-semnificatii/"
+            class="btn"
+            target="_blank"
+            >Detalii</a
+          >
+          <button class="btn btn-secondary" onclick="showGiftsMessage()">
+            🎁 Surpriză
+          </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://www.qmagazine.ro/wp-content/uploads/2017/12/Mos-Craciun-Q-Magazine.jpg"
+          alt="Moș Crăciun"
+        />
+        <h2>Moș Crăciun</h2>
+        <p>
+          Moș Crăciun e ca un magician al bucuriei: cu sacul lui plin de
+          cadouri, călătorește prin noapte pe sania trasă de reni, aducând
+          zâmbete și speranță copiilor din întreaga lume. Părul lui alb și
+          hainele roșii strălucesc în lumina lunii, iar râsul său „Ho, ho, ho!"
+          e ca un clopoțel care vestește magia sărbătorii.
+        </p>
+        <div class="card-buttons">
+          <a
+            href="https://www.libertatea.ro/lifestyle/cine-este-mos-craciun-2-1197129"
+            class="btn"
+            target="_blank"
+            >Detalii</a
+          >
+          <button class="btn btn-secondary" onclick="showSantaMessage()">
+            🎅 Ho Ho Ho!
+          </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://image.stirileprotv.ro/media/images/1920x1080/Dec2024/62505208.jpg"
+          alt="Prăjituri de Crăciun"
+        />
+        <h2>Prăjituri de Crăciun</h2>
+        <p>
+          Prăjiturile de Crăciun sunt mici opere de artă dulce: turtă dulce
+          decorată ca poveștile copilăriei, fursecuri în formă de stele și
+          brăduți care ascund aroma scorțișoarei și a cuișoarelor. Fiecare
+          mușcătură e ca o îmbrățișare caldă, iar mirosul lor transformă casa
+          într-un cămin plin de magie și sărbătoare.
+        </p>
+        <div class="card-buttons">
+          <a
+            href="https://gammo.ro/stiri/care-sunt-prajiturile-traditionale-de-craciun"
+            class="btn"
+            target="_blank"
+            >Detalii</a
+          >
+          <button class="btn btn-secondary" onclick="showCookiesMessage()">
+            🍪 Rețetă Secretă
+          </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihvISAdO7dXEPHKF4ZWf7gmIHalCBtn3bEzrIWYAVVGN6NujBbIu1rK-5x7WDaP0kXhkWMqGHJLxE1f0WWNCPEVJi9BCPbSW8Smcb8dwef2cjY8NXC6skoPlTyucouh85Z63n9YopmzA/s1600/cabana_la_munte_de_craciun.jpg"
+          alt="Peisaje de iarnă"
+        />
+        <h2>Peisaje de iarnă</h2>
+        <p>
+          Peisajele de iarnă sunt ca tablouri vii: zăpada acoperă totul cu o
+          pătură albă și strălucitoare, pomii își poartă crengile ca niște
+          bijuterii de gheață, iar fumul caselor se ridică lin în aerul rece.
+          Fiecare colț de natură devine magic, iar liniștea este întreruptă doar
+          de scânteile razelor de soare care dansează pe fulgii căzuți.
+        </p>
+        <div class="card-buttons">
+          <a
+            href="https://pixabay.com/ro/images/search/peisaje%20de%20iarna/"
+            class="btn"
+            target="_blank"
+            >Detalii</a
+          >
+          <button class="btn btn-secondary" onclick="showWinterMessage()">
+            ❄️ Magie de Iarnă
+          </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://s13emagst.akamaized.net/products/54795/54794242/images/res_ce7c7586733ea1c825544fdf88351255.jpg"
+          alt="Luminițe"
+        />
+        <h2>Luminițe festive</h2>
+        <p>
+          Luminițele festive sunt ca niște stele coborâte pe pământ: licăresc pe
+          case, brazi și străzi, transformând noaptea rece într-un spectacol
+          cald și plin de magie. Fiecare scânteie pare un zâmbet care aduce
+          bucurie și emoție în inimile celor care privesc.
+        </p>
+        <div class="card-buttons">
+          <a
+            href="https://newsmaker.md/ro/magia-anului-nou-la-chisinau-festivalul-luminilor-lights-dreams-a-inceput-la-cie-moldexpo"
+            class="btn"
+            target="_blank"
+            >Detalii</a
+          >
+          <button class="btn btn-secondary" onclick="showLightsMessage()">
+            ✨ Aprinde Lumina
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        <b>&copy; <span id="currentYear"></span> Magia Sărbătorilor de Iarnă</b>
+      </p>
+      <div class="footer-info">
+        <p>Sărbători Fericite! 🎄</p>
+        <p>Creat cu ❤️ pentru a aduce bucurie în sezonul festiv</p>
+      </div>
+    </footer>
+
+    <script>
+      function updateYear() {
+        const currentDate = new Date();
+        const year = currentDate.getFullYear();
+        document.getElementById("currentYear").textContent = year;
+      }
+
+      function showChristmasTree() {
+        alert(
+          "🎄 Bradul de Crăciun aduce magie în fiecare casă!\n\nSărbători Fericite! ✨"
+        );
+      }
+
+      function showGiftsMessage() {
+        const name = prompt("Cum te cheamă?", "Prieten");
+        if (name) {
+          alert(
+            `🎁 Dragă ${name},\n\nCel mai frumos cadou este timpul petrecut cu cei dragi!\n\nCrăciun Fericit! 🎅`
+          );
+        }
+      }
+
+      function showSantaMessage() {
+        const messages = [
+          "🎅 Ho, Ho, Ho! Moș Crăciun îți trimite urări de bine!",
+          "🎅 Ai fost cuminte anul acesta? 🎁",
+          "🎅 Sania lui Moș Crăciun este în drum spre tine! ❄️",
+        ];
+        const randomMessage =
+          messages[Math.floor(Math.random() * messages.length)];
+        alert(randomMessage);
+      }
+
+      function showCookiesMessage() {
+        const response = confirm(
+          "🍪 Vrei să afli secretul prăjiturilor perfecte?\n\nApasă OK pentru a descoperi!"
+        );
+        if (response) {
+          alert(
+            "✨ Secretul este: mult amor, scorțișoară și o picătură de magie sărbătorilor! 🎄"
+          );
+        } else {
+          alert("🍪 Poate data viitoare! Crăciun Fericit!");
+        }
+      }
+
+      function showWinterMessage() {
+        const temp = prompt(
+          "❄️ La ce temperatură este afară? (în grade Celsius)",
+          "0"
+        );
+        if (temp !== null) {
+          const temperature = parseFloat(temp);
+          if (temperature < -10) {
+            alert(
+              "🥶 Brrrr! Este foarte frig! Îmbracă-te gros și bea ceai cald!"
+            );
+          } else if (temperature < 0) {
+            alert(
+              "❄️ Vremea perfectă pentru bulgări de zăpada și om de zăpadă!"
+            );
+          } else if (temperature < 10) {
+            alert("☃️ Temperatura ideală pentru o plimbare de iarnă!");
+          } else {
+            alert("🌤️ Este cald pentru iarnă! Bucură-te de vremea frumoasă!");
+          }
+        }
+      }
+
+      function showLightsMessage() {
+        const colors = ["roșu", "verde", "albastru", "auriu", "argintiu"];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        alert(
+          `✨ Luminițele tale festive strălucesc în culoare ${randomColor}!\n\nFie ca acestă sărbătoare să îți aducă multă lumină și bucurie! 🎄`
+        );
+      }
+
+      updateYear();
+
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          alert(
+            "🎄 Bine ai venit în lumea magică a sărbătorilor de iarnă! ❄️\n\nExploră cardurile și descoperă tradițiile de Crăciun!"
+          );
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
